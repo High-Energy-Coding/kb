@@ -23,6 +23,10 @@ img {
   animation: pulse 5s infinite;
 }
 
+.image-container {
+  max-width: 400px;
+}
+
 .spectral-extrabold-italic {
   font-family: "Spectral", serif;
   font-weight: 600;
