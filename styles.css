@@ -207,17 +207,22 @@ body {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  margin: 20px;
-  padding: 20px;
+  width: 100%;
+  margin-bottom: 20px;
   text-align: center;
 }
 
+.service-card h3 {
+  margin-top: 8px;
+}
 .service-card img {
   width: 100%;
   border-radius: 8px;
 }
 
+.service-card p {
+  padding: 24px 0;
+}
 /* Contact Section */
 .contact {
   color: white;
