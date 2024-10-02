@@ -88,20 +88,27 @@ body {
 
 /* Header */
 .header {
+  margin: 8px 16px 0;
   background-color: white;
   color: #fff;
   padding: 20px;
   text-align: center;
+  border-radius: 50px;
 }
 
 .nav-bar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .logo {
-  width: 50px;
+  height: 24px;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    height: 48px;
+  }
 }
 
 .menu-icon span {
@@ -145,7 +152,8 @@ body {
   }
 }
 .hero {
-  background-color: #486c64;
+  background-color: #668a82;
+  overflow: hidden;
 }
 
 .hero-title {
@@ -172,7 +180,9 @@ body {
   margin-bottom: 20px;
 }
 
-.about button {
+.about a {
+  text-decoration: none;
+  display: block;
   margin-top: 40px;
   background-color: #3c615a;
   color: white;
