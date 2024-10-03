@@ -1,25 +1,132 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="KB Physical Wellness - Your partners in proactive physical therapy and rehabilitation.">
-    <meta name="keywords" content="Physical Therapy, Wellness, Orthopedics, Rehabilitation">
-    <meta name="author" content="KB Physical Wellness">
-    
     <title>KB Physical Wellness</title>
-    
+    <meta name="description" content="Proactive, personalized care at KB Physical Wellness. From preventative care to recovery, our team helps you stay at your best and live pain-free.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="KB Physical Wellness - The Wellness You Deserve">
+    <meta property="og:description" content="Empowering your journey to physical wellness with proactive care, personalized therapy, and rehabilitation.">
+    <meta property="og:image" content="/images/kb2.png">
+    <meta property="og:url" content="https://www.kbphysicalwellness.com">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KB Physical Wellness - The Wellness You Deserve">
+    <meta name="twitter:description" content="Personalized, proactive care to support your physical wellness journey.">
+    <meta name="twitter:image" content="/images/kb2.png">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Nanum+Myeongjo&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container"> 
-        <div class="image-container">
-            <img src="/images/kb2.png">
+
+    <section class="hero">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="nav-bar">
+                <img src="images/top_logo.png" alt="KB Logo" class="logo">
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <div class="inner-hero">
+            <h1 class="hero-title">The Wellness You Deserve</h1>
         </div>
-        <h2 class="spectral-extrabold-italic">Wellness awaits. Schedule opens soon. </h2>
-    </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container container-center">
+            <div class="about-container">
+                <h2 class="pt-serif-regular about-title">Empowering Your Journey to Physical Wellness</h2>
+                <div class="pt-serif-regular about-body">
+                    <p> At KB Physical Wellness, we believe in breaking free from traditional healthcare's limitations, focusing instead on proactive, personalized care.</p>
+                    <p> Our goal is to help address potential health issues before they become chronic, offering flexible wellness assessments and early intervention treatments.</p>
+                    <p> Whether you're recovering from an injury or aiming to stay at your best, we're here to guide you on your journey to lasting wellness. </p>
+                </div>
+                <a href="tel:+18473060683">Call to schedule</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <h2 class="pt-serif-bold team-title">Meet the Team</h2>
+            <div class="team-member">
+                <img src="images/brittany.png" alt="Brittany">
+                <h3>Brittany VonMoser</h3>
+                <p class="member-body">Brittany is a dedicated physical therapist who’s passionate about helping people move better and live pain-free. With over a decade of experience in outpatient orthopedics, she combines expertise with a genuine commitment to personalized care.</p>
+            </div>
+            <div class="team-member">
+                <img src="images/kim.png" alt="Kimberly">
+                <h3>Kimberly Greising</h3>
+                <p class="member-body">Kimberly brings a thoughtful, patient-centered approach to every session. She works closely with her patients to help them achieve their health goals. Kimberly is dedicated to making wellness accessible and effective for everyone she serves.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="">
+        <div class="container">
+            <h2 class="pt-serif-regular services-title">Services</h2>
+            <div class="services">
+                <div class="service-card">
+                    <img src="images/bike.jpg" alt="Preventative Care">
+                    <h3>Preventative Care</h3>
+                    <p class="service-body">Stay ahead of pain with our proactive wellness assessments. We help you identify and address potential issues before they escalate, ensuring you maintain a healthy, active lifestyle. Start your wellness journey with us today</p>
+                </div>
+                <div class="service-card">
+                    <img src="images/runner.jpg" alt="Recovery & Rehabilitation">
+                    <h3>Recovery & Rehabilitation</h3>
+                    <p class="service-body">Reclaim your strength and mobility with our personalized therapy plans. Whether you’re recovering from an injury or surgery, we tailor our approach to help you heal faster and more effectively. Let us support you every step of the way.</p>
+                </div>
+                <div class="service-card">
+                    <img src="images/golf.png" alt="Golf Assessment">
+                    <h3>Golf Assessment</h3>
+                    <p class="service-body">Enhance your golf game with our comprehensive Golf Performance Assessment, inspired by the Titleist Performance Institute’s 13-point evaluation. We assess your swing mechanics, strength, flexibility, and endurance to help you prevent injuries and improve performance on the course.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact">
+                <h2 class="contact-title">Let's get in touch</h2>
+                <form class="contact-form" netlify>
+                    <input type="text" placeholder="Your name">
+                    <input type="text" placeholder="Your phone">
+                    <input type="email" placeholder="Your email">
+                    <textarea placeholder="Message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="inner-footer">
+                <img src="images/logo_no_circle.png" alt="KB Logo">
+                <p>Located inside "It’s all about you Hair Salon"</p>
+                <p>2330 E Rand Road, Arlington Heights, IL 60004</p>
+                <p>(847) 306-0638</p>
+                <p>kbphysicalwellness@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
