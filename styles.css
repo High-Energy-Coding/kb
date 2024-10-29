@@ -129,6 +129,34 @@ body {
   background-repeat: no-repeat;
 }
 
+.hero-transition {
+  height: 50px;
+  width: 100%;
+  background-color: #668a82;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-transition::after {
+  content: "";
+  position: absolute;
+  background-color: #eeeae7;
+  height: 95%;
+  width: 130%; /* Expanding the width to create the effect */
+  left: -15%; /* Position it to the left */
+  bottom: -1px;
+  border-top-left-radius: 50% 100%; /* Creates the moon shape */
+  border-top-right-radius: 50% 100%;
+}
+@media screen and (min-width: 768px) {
+  .hero-transition {
+    height: 100px;
+  }
+  .hero-transition::after {
+    height: 95%;
+  }
+}
+
 @media screen and (min-width: 900px) {
   .inner-hero {
     background-size: contain;
@@ -181,7 +209,6 @@ body {
   max-width: 500px;
 }
 .about-title {
-  margin-top: 80px;
   font-size: 32px;
   margin-bottom: 20px;
 }
