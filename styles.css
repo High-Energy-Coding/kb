@@ -121,20 +121,45 @@ body {
 
 .inner-hero {
   position: relative;
-  height: 70vh;
-  min-height: 600px;
+  height: 650px;
   background-image: url("images/hero_with_logo.png");
   background-size: cover;
-  background-position: calc(50%) calc(50% + 160px);
+  background-position: calc(50%) calc(50% + 80px);
   background-repeat: no-repeat;
+}
+
+.hero-transition {
+  height: 50px;
+  width: 100%;
+  background-color: #eeeae7;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.hero-transition::after {
+  content: "";
+  background-color: #668a82;
+  position: absolute;
+  height: 95%;
+  width: 130%; /* Expanding the width to create the effect */
+  left: -15%; /* Position it to the left */
+  top: -1px;
+
+  border-bottom-left-radius: 50% 100%; /* Creates the moon shape */
+  border-bottom-right-radius: 50% 100%;
+}
+@media screen and (min-width: 768px) {
+  .hero-transition {
+    height: 100px;
+  }
+  .hero-transition::after {
+    height: 95%;
+  }
 }
 
 @media screen and (min-width: 900px) {
   .inner-hero {
     background-size: contain;
-  }
-  .hero-title {
-    padding-top: 40px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -165,7 +190,7 @@ body {
   color: white;
   text-align: center;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 740px) {
   .hero-title {
     font-size: 56px;
   }
@@ -181,7 +206,6 @@ body {
   max-width: 500px;
 }
 .about-title {
-  margin-top: 80px;
   font-size: 32px;
   margin-bottom: 20px;
 }
