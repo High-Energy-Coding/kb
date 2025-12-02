@@ -8,7 +8,7 @@
 
 body {
   line-height: 1.6;
-  background-color: #eeeae7;
+  background-color: #C8D5D0;
   color: #333;
 }
 
@@ -94,6 +94,7 @@ body {
   padding: 20px;
   text-align: center;
   border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .nav-bar {
@@ -122,23 +123,24 @@ body {
 .inner-hero {
   position: relative;
   height: 650px;
-  background-image: url("images/hero_with_logo.png");
-  background-size: cover;
-  background-position: calc(50%) calc(50% + 80px);
-  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
 }
 
 .hero-transition {
   height: 50px;
   width: 100%;
-  background-color: #eeeae7;
+  background-color: #C8D5D0;
   position: relative;
   overflow-x: hidden;
 }
 
 .hero-transition::after {
   content: "";
-  background-color: #668a82;
+  background-color: #E0EBE7;
   position: absolute;
   height: 95%;
   width: 130%; /* Expanding the width to create the effect */
@@ -157,42 +159,47 @@ body {
   }
 }
 
-@media screen and (min-width: 900px) {
-  .inner-hero {
-    background-size: contain;
-  }
-}
 @media screen and (min-width: 768px) {
   .inner-hero {
-    background-size: contain;
-  }
-  .hero-section {
-    background-position: center top; /* Reveals more of the image as the screen size increases */
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .hero-section {
-    background-position: center top;
-    height: 90vh; /* Optionally adjust the height for larger screens */
+    height: 700px;
   }
 }
 .hero {
-  background-color: #668a82;
+  background-color: #E0EBE7;
   overflow: hidden;
 }
 
+.hero-logo {
+  max-width: 280px;
+  width: 80%;
+  margin-bottom: 50px;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.15));
+}
+
+@media screen and (min-width: 768px) {
+  .hero-logo {
+    max-width: 380px;
+    margin-bottom: 60px;
+  }
+}
+
 .hero-title {
-  margin: 32px 16px;
-  font-size: 40px;
+  margin: 0 16px 32px;
+  font-size: 42px;
   line-height: 1.2;
-  margin-bottom: 20px;
   color: white;
   text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4),
+               0 6px 16px rgba(0, 0, 0, 0.25);
 }
 @media screen and (min-width: 740px) {
   .hero-title {
-    font-size: 56px;
+    font-size: 58px;
+    margin: 0 16px 40px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4),
+                 0 8px 20px rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -208,32 +215,51 @@ body {
 .about-title {
   font-size: 32px;
   margin-bottom: 20px;
+  color: #5a7d75;
 }
 
 .about a {
   text-decoration: none;
-  display: block;
+  display: inline-block;
   margin-top: 40px;
-  background-color: #3c615a;
+  background-color: #5a7d75;
   color: white;
-  padding: 10px 20px;
+  padding: 18px 48px;
   border: none;
   cursor: pointer;
-  border-radius: 9px;
-  width: 100%;
+  border-radius: 50px;
+  width: auto;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 16px rgba(90, 125, 117, 0.4);
+  transition: all 0.3s ease;
+}
+
+.about a:hover {
+  background-color: #4a6d65;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(90, 125, 117, 0.5);
+}
+
+.about a:active {
+  transform: translateY(-1px);
 }
 .about-body p {
   margin-bottom: 16px;
+  line-height: 1.8;
+  color: #555;
 }
 
 /* Team Section */
 .team {
   padding: 60px 20px;
   text-align: center;
-  background-color: #e2eae6;
+  background-color: #B8C9C4;
 }
 .team-title {
-  color: #8aa19f;
+  color: #5a7d75;
   font-size: 42px;
 }
 
@@ -243,13 +269,22 @@ body {
   margin: 20px;
 }
 
+.team-member h3 {
+  color: #5a7d75;
+  margin: 16px 0 8px 0;
+  font-size: 22px;
+}
+
 .team-member img {
   max-width: 130px;
-  border-radius: 5px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .member-body {
   padding: 8px 0;
+  line-height: 1.7;
+  color: #555;
 }
 
 /* Services Section */
@@ -276,31 +311,42 @@ body {
 
 .service-card {
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   width: 100%;
   margin-bottom: 20px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .service-card h3 {
-  margin-top: 8px;
+  margin: 16px 0;
+  color: #5a7d75;
+  font-size: 24px;
 }
 .service-card img {
   width: 100%;
-  border-radius: 8px 8px 0 0;
+  border-radius: 12px 12px 0 0;
   height: 318px;
   object-fit: cover;
 }
 
 .service-body {
   padding: 24px;
+  line-height: 1.7;
+  color: #555;
 }
 
 .services-title {
   font-size: 48px;
   margin: 40px 0;
   text-align: center;
+  color: #5a7d75;
 }
 /* Contact Section */
 .contact {
@@ -310,7 +356,7 @@ body {
 }
 
 .contact-title {
-  color: rgba(72, 108, 100, 0.76);
+  color: #5a7d75;
   font-size: 30px;
   margin-bottom: 24px;
   font-family: Inter;
@@ -319,27 +365,51 @@ body {
 .contact textarea {
   width: 100%;
   max-width: 400px;
-  padding: 10px;
+  padding: 12px 16px;
   margin: 10px 0;
-  border: none;
-  border-radius: 5px;
-  background-color: #c5cec9;
+  border: 2px solid #B8C9C4;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+  border-color: #E0EBE7;
 }
 .contact input::placeholder,
 .contact textarea::placeholder {
-  color: white;
+  color: #999;
   font-family: Inter;
 }
 
 .contact button {
-  background-color: rgba(72, 108, 100, 0.77);
+  background-color: #5a7d75;
   color: white;
-  padding: 10px 20px;
+  padding: 18px 48px;
   border: none;
   cursor: pointer;
   font-family: Inter;
-  border-radius: 51px;
-  width: 144px;
+  border-radius: 50px;
+  width: auto;
+  min-width: 180px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 16px rgba(90, 125, 117, 0.4);
+  transition: all 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #4a6d65;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(90, 125, 117, 0.5);
+}
+
+.contact button:active {
+  transform: translateY(-1px);
 }
 .contact-form {
   display: flex;
@@ -350,7 +420,7 @@ body {
 
 /* Footer */
 .footer {
-  background-color: #486c64;
+  background-color: #5a7d75;
   color: white;
   padding: 40px 20px;
   text-align: center;
